@@ -1,0 +1,677 @@
+/* ==========================================================================
+   PORTFOLIO V2 — HIGH-END CYBER-AGENCY DESIGN SYSTEM
+   Palette: Deep Dark (#080023 / #0c042c) with Neon Lavender & Cyber Lime
+   ========================================================================== */
+
+:root {
+  --bg-void: #060114;
+  --bg-deep: #080023;
+  --bg-surface: #0c042c;
+  --bg-card: rgba(14, 7, 44, 0.72);
+  --bg-card-hover: rgba(22, 12, 64, 0.85);
+  
+  --color-lavender: #AC91FF;
+  --color-lavender-glow: rgba(172, 145, 255, 0.4);
+  --color-purple-vivid: #8E6FFF;
+  --color-lime: #D4FF3F;
+  --color-lime-glow: rgba(212, 255, 63, 0.35);
+  --color-cyan: #00F2FE;
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8CAE6;
+  --text-muted: #8E92B8;
+  
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Base Body & Reset */
+html, body {
+  background-color: var(--bg-void);
+  color: var(--text-secondary);
+  font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ambient Radial Mesh Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle 800px at 50% -10%, rgba(142, 111, 255, 0.18) 0%, transparent 70%),
+    radial-gradient(circle 600px at 90% 25%, rgba(104, 51, 255, 0.14) 0%, transparent 65%),
+    radial-gradient(circle 500px at 10% 60%, rgba(212, 255, 63, 0.05) 0%, transparent 70%),
+    radial-gradient(circle 700px at 50% 100%, rgba(0, 242, 254, 0.08) 0%, transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle Film Grain / Grid Overlay */
+.cyber-grid-overlay {
+  position: fixed;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(172, 145, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(172, 145, 255, 0.035) 1px, transparent 1px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Lenis Recommended Clean Styling */
+html {
+  scroll-behavior: auto !important;
+}
+html.lenis, html.lenis body {
+  height: auto;
+}
+html.lenis, .lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Scroll Progress Line */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #D4FF3F 0%, #AC91FF 50%, #00F2FE 100%);
+  z-index: 1000;
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(212, 255, 63, 0.8);
+}
+
+/* ==========================================================================
+   REQUIREMENT 4: MASKED GLOWING BORDERS (mask-composite: exclude)
+   ========================================================================== */
+
+.masked-border {
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.masked-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: linear-gradient(
+    145deg,
+    rgba(212, 255, 63, 0.45) 0%,
+    rgba(172, 145, 255, 0.40) 35%,
+    rgba(104, 51, 255, 0.12) 75%,
+    rgba(0, 242, 254, 0.35) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: opacity 0.4s ease, background 0.4s ease;
+  z-index: 2;
+}
+
+.masked-border:hover::before {
+  background: linear-gradient(
+    145deg,
+    rgba(212, 255, 63, 0.85) 0%,
+    rgba(172, 145, 255, 0.75) 45%,
+    rgba(0, 242, 254, 0.65) 100%
+  );
+  box-shadow: 0 0 30px rgba(172, 145, 255, 0.25);
+}
+
+/* Subtle variant for tags and small pills */
+.masked-border-subtle {
+  position: relative;
+  border-radius: 9999px;
+}
+.masked-border-subtle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 255, 63, 0.6) 0%,
+    rgba(172, 145, 255, 0.35) 60%,
+    rgba(172, 145, 255, 0.1) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   DOUBLE-BEZEL (DOPPELRAND) ARCHITECTURE
+   Machined hardware aesthetic: outer shell + inner core
+   ========================================================================== */
+
+.bezel-outer {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  padding: 0.45rem;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.75);
+  transition: border-color 0.35s var(--ease-spring), transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring);
+}
+
+.bezel-outer:hover {
+  border-color: rgba(172, 145, 255, 0.35);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.85), 0 0 35px -5px rgba(172, 145, 255, 0.2);
+}
+
+.bezel-inner {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: calc(2rem - 0.45rem);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   REQUIREMENT 2: DENNIS SNELLENBERG 3-LAYER LERP-CURSOR
+   ========================================================================== */
+
+.custom-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-cursor-wrapper.cursor-visible {
+  opacity: 1;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  background: var(--color-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-lime);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  border: 1.5px solid rgba(172, 145, 255, 0.65);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  will-change: transform;
+  transition: width 0.25s var(--ease-spring),
+              height 0.25s var(--ease-spring),
+              margin 0.25s var(--ease-spring),
+              background 0.25s var(--ease-spring),
+              border-color 0.25s var(--ease-spring);
+}
+
+.cursor-aura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 220px;
+  margin-top: -110px;
+  margin-left: -110px;
+  background: radial-gradient(circle, rgba(172, 145, 255, 0.16) 0%, rgba(212, 255, 63, 0.04) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  filter: blur(12px);
+}
+
+/* Cursor Interactive Morphing States */
+.cursor-mode-link .cursor-ring {
+  width: 58px;
+  height: 58px;
+  margin-top: -29px;
+  margin-left: -29px;
+  border-color: var(--color-lime);
+  background: rgba(212, 255, 63, 0.08);
+  box-shadow: 0 0 20px rgba(212, 255, 63, 0.25);
+}
+
+.cursor-mode-link .cursor-dot {
+  opacity: 0;
+}
+
+.cursor-mode-card .cursor-ring {
+  width: 96px;
+  height: 96px;
+  margin-top: -48px;
+  margin-left: -48px;
+  background: rgba(12, 4, 44, 0.88);
+  border: 1.5px solid var(--color-lime);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(212, 255, 63, 0.35);
+  text-align: center;
+  padding: 6px;
+}
+
+.cursor-mode-card .cursor-dot {
+  display: none;
+}
+
+.cursor-mode-drag .cursor-ring {
+  width: 76px;
+  height: 76px;
+  margin-top: -38px;
+  margin-left: -38px;
+  background: rgba(172, 145, 255, 0.2);
+  border: 1.5px solid #AC91FF;
+  backdrop-filter: blur(8px);
+}
+
+.cursor-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-lime);
+  text-transform: uppercase;
+  display: none;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.cursor-mode-card .cursor-label,
+.cursor-mode-drag .cursor-label {
+  display: block;
+}
+
+.cursor-clicking .cursor-ring {
+  transform: scale(0.85) !important;
+}
+
+/* ==========================================================================
+   REQUIREMENT 3: INTERACTIVE MAGNETIC BUTTONS & NESTED CTA
+   ========================================================================== */
+
+.btn-magnetic {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  will-change: transform;
+}
+
+/* High-Voltage Lime Button */
+.btn-magnetic-lime {
+  background: var(--color-lime);
+  color: #060114;
+  box-shadow: 0 0 25px rgba(212, 255, 63, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+.btn-magnetic-lime:hover {
+  box-shadow: 0 0 35px rgba(212, 255, 63, 0.7), inset 0 1px 0 rgba(255, 255, 255, 1);
+  filter: brightness(1.05);
+}
+
+/* Electric Lavender Button */
+.btn-magnetic-lavender {
+  background: linear-gradient(135deg, #8E6FFF 0%, #AC91FF 100%);
+  color: #FFFFFF;
+  box-shadow: 0 0 25px rgba(142, 111, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border: none;
+}
+
+.btn-magnetic-lavender:hover {
+  box-shadow: 0 0 35px rgba(172, 145, 255, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  filter: brightness(1.06);
+}
+
+/* Glass Island Button */
+.btn-magnetic-glass {
+  background: rgba(14, 7, 44, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #EDEDED;
+  border: 1px solid rgba(172, 145, 255, 0.22);
+}
+
+.btn-magnetic-glass:hover {
+  border-color: var(--color-lime);
+  color: #FFFFFF;
+  background: rgba(22, 12, 64, 0.9);
+  box-shadow: 0 0 25px rgba(212, 255, 63, 0.2);
+}
+
+/* Nested Trailing Icon Circle (Doppel-Button pattern) */
+.btn-trailing-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s var(--ease-spring);
+}
+
+.btn-magnetic-lime .btn-trailing-icon {
+  background: rgba(0, 0, 0, 0.12);
+  color: #060114;
+}
+
+.btn-magnetic-lavender .btn-trailing-icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+}
+
+.btn-magnetic-glass .btn-trailing-icon {
+  background: rgba(172, 145, 255, 0.15);
+  color: var(--color-lime);
+}
+
+.btn-magnetic:active {
+  filter: brightness(0.92);
+}
+
+/* Case Filter Tabs Styling */
+.case-filter-btn {
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.25s var(--ease-spring);
+  cursor: pointer;
+}
+
+.case-filter-btn:hover {
+  color: #FFFFFF;
+}
+
+.case-filter-btn.active-filter {
+  color: #060114 !important;
+  background: var(--color-lime) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 18px rgba(212, 255, 63, 0.45);
+}
+
+/* ==========================================================================
+   REQUIREMENT 6: BENTO GRID WITH SPOTLIGHT TRACKING
+   ========================================================================== */
+
+.spotlight-card {
+  position: relative;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-spring), border-color 0.35s var(--ease-spring);
+}
+
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    500px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+    rgba(212, 255, 63, 0.12),
+    transparent 50%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+/* Typography Gradient Utilities */
+.heading-display {
+  font-family: 'Unbounded', 'Syne', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Bento Metrics Layout & Typography */
+.bento-metric-slot {
+  height: 3.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+  width: 100%;
+}
+
+.bento-metric-num {
+  font-family: 'Unbounded', 'Syne', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.metric-suffix {
+  font-size: 0.62em;
+  font-weight: 700;
+  margin-left: 2px;
+  display: inline-block;
+  vertical-align: baseline;
+  opacity: 0.92;
+}
+
+.metric-prefix {
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: baseline;
+  opacity: 0.92;
+}
+
+.text-gradient-lime-lavender {
+  background: linear-gradient(135deg, #FFFFFF 20%, #D4FF3F 65%, #AC91FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-lavender {
+  background: linear-gradient(135deg, #FFFFFF 30%, #AC91FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-lime {
+  background: linear-gradient(135deg, #FFFFFF 20%, #D4FF3F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer Line Divider */
+.shimmer-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(172, 145, 255, 0.25) 20%,
+    rgba(212, 255, 63, 0.6) 50%,
+    rgba(172, 145, 255, 0.25) 80%,
+    transparent 100%
+  );
+  opacity: 0.65;
+}
+
+/* Pulse Dot */
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0.5; }
+}
+
+.pulse-dot {
+  animation: pulseGlow 2.2s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   SLIDE INSPECTOR MODAL
+   ========================================================================== */
+
+#slide-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#slide-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 1, 20, 0.88);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+}
+
+.modal-content-shell {
+  position: relative;
+  max-width: 92vw;
+  max-height: 90vh;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image-wrapper {
+  position: relative;
+  max-width: 1200px;
+  max-height: 75vh;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(172, 145, 255, 0.3);
+  background: #000;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* Toast Notification Pill */
+.app-toast-pill {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(12, 4, 44, 0.95);
+  border: 1px solid var(--color-lime);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 255, 63, 0.3);
+  backdrop-filter: blur(16px);
+  border-radius: 9999px;
+  color: #FFFFFF;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  z-index: 10000;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 0.35s var(--ease-spring), opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.app-toast-pill.toast-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Focus Outline for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-lime) !important;
+  outline-offset: 3px !important;
+  border-radius: 8px;
+}
+
+/* Mobile Nav Drawer */
+#mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 1, 20, 0.96);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-spring);
+}
+
+#mobile-nav.nav-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hamburger toggle animation */
+.hamburger-bar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.toggle-active .hamburger-bar-top {
+  transform: translateY(6px) rotate(45deg);
+}
+.toggle-active .hamburger-bar-bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
