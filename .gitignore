@@ -1,0 +1,6 @@
+.agents/
+.playwright-cli/
+.gemini/
+*.log
+skills-lock.json
+test_*.png
