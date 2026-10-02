@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -59,7 +59,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="v2/css/styles.css">
 </head>
 <body class="selection:bg-lime-400 selection:text-black relative">
 
@@ -83,7 +83,7 @@
       <a href="#hero" class="bezel-outer !p-1 !rounded-2xl group flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-[1.02] shrink-0">
         <div class="bezel-inner !rounded-xl px-2.5 sm:px-3 py-1.5 flex items-center gap-2 sm:gap-2.5">
           <div class="relative w-7 h-7 sm:w-8 sm:h-8 rounded-lg overflow-hidden border border-lime-400/40 shrink-0">
-            <img src="../assets/kristina.jpg" alt="Кристина Лукичёва" class="w-full h-full object-cover">
+            <img src="assets/kristina.jpg" alt="Кристина Лукичёва" class="w-full h-full object-cover">
           </div>
           <div>
             <div class="text-[11px] sm:text-xs font-bold text-white tracking-tight group-hover:text-lime-400 transition-colors">Кристина Лукичёва</div>
@@ -237,7 +237,7 @@
 
                 <!-- Portrait Image -->
                 <div class="relative h-[440px] sm:h-[490px] w-full bg-void overflow-hidden">
-                  <img src="../assets/kristina.jpg" alt="Кристина Лукичёва — Senior Project & Delivery Manager" 
+                  <img src="assets/kristina.jpg" alt="Кристина Лукичёва — Senior Project & Delivery Manager" 
                        class="w-full h-full object-cover object-[center_25%] transition-transform duration-700 ease-out group-hover:scale-105 filter contrast-[1.04]">
                   
                   <!-- Bottom Fade for Readability -->
@@ -438,7 +438,7 @@
         <div class="bento-stagger-item spotlight-card masked-border p-5 xl:p-6 md:col-span-2 flex flex-col justify-between group">
           <div class="flex items-center justify-between mb-4">
             <span class="text-xs font-mono text-lime-400 tracking-wider uppercase">// HR MARKETING CAMPAIGN // AUCHAN</span>
-            <span class="px-2.5 py-0.5 rounded-full bg-lime-400/20 text-lime-400 text-[10px] font-mono">+125% К KPI</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-lime-400/20 text-lime-400 text-[10px] font-mono">ПЛАН ПЕРЕВЫПОЛНЕН: ЦЕЛЬ ~300</span>
           </div>
           <div class="flex-1 flex flex-col sm:flex-row sm:items-start gap-5 pt-2 pb-3">
             <div class="w-28 sm:w-36 shrink-0">
@@ -458,7 +458,7 @@
             </div>
           </div>
           <div class="mt-auto pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-            <span class="text-muted">CPA ниже планового на 28%</span>
+            <span class="text-muted">Высокая лояльность клиента</span>
             <a href="#case-auchan" class="text-lime-400 hover:underline">Перейти к деталям →</a>
           </div>
         </div>
@@ -508,7 +508,7 @@
         </div>
       </div>
 
-      <!-- CASES FEED -->
+            <!-- CASES FEED -->
       <div class="space-y-16">
 
         <!-- ==============================================
@@ -516,6 +516,7 @@
              =============================================== -->
         <article id="case-global-group" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="b2b" data-cursor-view="GLOBAL GROUP">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -543,16 +544,22 @@
             <!-- Role & Challenge Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль в проекте:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Project / Product-менеджер</strong> полного цикла развития двух B2B-сервисов («Глобал» и «РИФ»: мобильные приложения iOS/Android + веб-версии).
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль в проекте:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Project/Product-менеджер</strong> — сопровождение и развитие продукта (два B2B-сервиса заказа «Глобал» и «РИФ»: мобильные приложения + веб-версии).
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lime-400 uppercase tracking-wider">Ситуация и вызов:</div>
+                <div class="text-xs font-mono text-lime-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                  <span>2. Ситуация и вызов:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Продукт был передан в поддержку от предыдущей команды. Клиент ожидал не просто закрытия багов, а глубокого стратегического развития и увеличения объемов оптовых заказов.
+                  Клиент передал в поддержку продукт от другой команды (2 бренда × приложение + веб = 4 интерфейса) и ждал от подрядчика проактивного развития, а не только исполнения задач.
                 </p>
               </div>
             </div>
@@ -570,64 +577,64 @@
               <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
                 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_1.png" data-slide-caption="Global Group: Обзор пакета предложений (14 идей для сайта, 2 для приложения)">
-                  <img src="../assets/gg_slide_1.png" alt="Слайд 01" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_1.png" data-slide-caption="Global Group: Обзор пакета предложений (14 идей для сайта, 2 для приложения)">
+                  <img src="assets/gg_slide_1.png" alt="Слайд 01" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">01</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_3.png" data-slide-caption="Global Group: Слайд 03 — Исследование клиентского пути и узких мест воронки">
-                  <img src="../assets/gg_slide_3.png" alt="Слайд 03" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_3.png" data-slide-caption="Global Group: Слайд 03 — Исследование клиентского пути и узких мест воронки">
+                  <img src="assets/gg_slide_3.png" alt="Слайд 03" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">03</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_4.png" data-slide-caption="Global Group: Слайд 04 — Анализ пользовательских сценариев оптовых покупателей">
-                  <img src="../assets/gg_slide_4.png" alt="Слайд 04" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_4.png" data-slide-caption="Global Group: Слайд 04 — Анализ пользовательских сценариев оптовых покупателей">
+                  <img src="assets/gg_slide_4.png" alt="Слайд 04" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">04</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_6.png" data-slide-caption="Global Group: Слайд 06 — Оптимизация UX оформления оптовых заказов">
-                  <img src="../assets/gg_slide_6.png" alt="Слайд 06" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_6.png" data-slide-caption="Global Group: Слайд 06 — Оптимизация UX оформления оптовых заказов">
+                  <img src="assets/gg_slide_6.png" alt="Слайд 06" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">06</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_9.png" data-slide-caption="Global Group: Слайд 09 — Архитектура каталога и фильтрации номенклатуры">
-                  <img src="../assets/gg_slide_9.png" alt="Слайд 09" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_9.png" data-slide-caption="Global Group: Слайд 09 — Архитектура сквозного поиска и кросс-продаж">
+                  <img src="assets/gg_slide_9.png" alt="Слайд 09" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">09</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_10.png" data-slide-caption="Global Group: Слайд 10 — Механика повторных заказов и оптового чекаута">
-                  <img src="../assets/gg_slide_10.png" alt="Слайд 10" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_10.png" data-slide-caption="Global Group: Слайд 10 — Механика быстрого повтора заказов (Ранее заказывали)">
+                  <img src="assets/gg_slide_10.png" alt="Слайд 10" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">10</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_16.png" data-slide-caption="Global Group: Слайд 16 — Спецификация мобильного приложения iOS & Android">
-                  <img src="../assets/gg_slide_16.png" alt="Слайд 16" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_16.png" data-slide-caption="Global Group: Слайд 16 — Блок допродаж «Добавьте к заказу» (+10-30% чек)">
+                  <img src="assets/gg_slide_16.png" alt="Слайд 16" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">16</span>
                   </div>
                 </div>
 
                 <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="../assets/gg_slide_19.png" data-slide-caption="Global Group: Слайд 19 — План поэтапного внедрения и оценка бизнес-эффекта">
-                  <img src="../assets/gg_slide_19.png" alt="Слайд 19" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
+                     data-open-slide data-gallery="global-group" data-cursor-drag="СЛАЙД" data-slide-src="assets/gg_slide_19.png" data-slide-caption="Global Group: Слайд 19 — Офлайн-режим мобильного приложения с синхронизацией">
+                  <img src="assets/gg_slide_19.png" alt="Слайд 19" class="w-full h-24 sm:h-28 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-void/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-surface/90 text-white border border-white/10">19</span>
                   </div>
@@ -636,29 +643,82 @@
               </div>
             </div>
 
-            <!-- Decisions & Contribution Grid -->
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-lime-400 uppercase tracking-wider">// УПРАВЛЕНЧЕСКИЙ ВКЛАД И РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">16 Инициатив в 1 пакете</div>
-                  <p class="text-xs text-secondary leading-relaxed">
-                    Сформировала структурированный пакет из 14 идей для сайта и 2 для приложений с оценкой сроков и бизнес-эффекта.
-                  </p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Согласование без правок</div>
-                  <p class="text-xs text-secondary leading-relaxed">
-                    Пакет принят клиентом в работу сразу. Закреплен статус доверенного стратегического партнера.
-                  </p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Снижение трения в B2B</div>
-                  <p class="text-xs text-secondary leading-relaxed">
-                    Ускорение оформления повторных заказов для постоянных оптовых покупателей на 35%.
-                  </p>
-                </div>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                <span>3. Мой личный вклад (Delivery & Product Management):</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Координирую команду проекта (дизайнер, разработчик приложений, верстальщик, тестировщик) и веду поставку изменений в прозрачном ежемесячном цикле — от ТЗ до релиза и отчёта клиенту;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">На основе аналитики (Яндекс.Метрика, AppMetrica) и конкурентного анализа самостоятельно формулирую и приоритизирую гипотезы по развитию продукта;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Подготовила и презентовала клиенту пакет предложений по развитию сайта и приложения — включая механики удержания и роста конверсии (блок «Ранее заказывали», прозрачность на этапах регистрации, кросс-продажи в корзине, новый канал поддержки).</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Вывод-связка (п.4 ТЗ) -->
+            <div class="mb-8 p-4 rounded-xl bg-surface/70 border border-white/10 font-mono text-xs sm:text-sm text-lavender-200 flex items-center gap-2.5 shadow-lg">
+              <span class="text-blue-400 font-bold shrink-0">⚡ ИТОГ:</span>
+              <span class="leading-relaxed">Клиент получил предсказуемого партнёра, который системно развивает продукт на основе данных, а не только чинит баги.</span>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">80.2%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">активных пользователей регулярно совершают действия</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">~793</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">действия на пользователя в среднем</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">24.5%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">retention 4 недели (18.3% за 8 недель)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">~80%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">конверсия из корзины в заказ (отказы 0.8%)</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Продукт стабилизирован и системно развивается больше года;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Высокая вовлечённость: 80,2% активной базы пользователей приложения регулярно совершают действия, ~793 действия на пользователя в среднем;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Устойчивое удержание: retention 4 недели — 24,5%, 8 недель — 18,3%;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Веб-версия стабильно набирает ~1130 визитов в месяц при отказах 0,8% и конверсии из корзины в заказ ~80%;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-blue-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Клиент получил предсказуемого партнёра, который системно развивает продукт на основе данных, а не только чинит баги.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -669,20 +729,21 @@
              =============================================== -->
         <article id="case-roche" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="pharma" data-cursor-view="ROCHE">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-teal-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
                 <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-400 text-xs font-mono uppercase mb-2">
-                  // КЕЙС 02 · МЕЖДУНАРОДНЫЙ ФАРМАЦЕВТИЧЕСКИЙ ГИГАНТ
+                  // КЕЙС 02 · МЕЖДУНАРОДНЫЙ ФАРМ-КЛИЕНТ
                 </span>
                 <h3 class="heading-display text-2xl sm:text-4xl font-extrabold text-white">
                   Roche (coaguchek.ru, mnoportal.ru)
                 </h3>
                 <div class="flex items-center gap-4 mt-2 text-xs font-mono text-muted">
                   <span>Продукты:</span>
-                  <span class="text-teal-400">coaguchek.ru</span>
+                  <a href="https://coaguchek.ru" target="_blank" rel="noopener" class="text-teal-400 hover:underline">coaguchek.ru</a>
                   <span>•</span>
-                  <span class="text-teal-400">mnoportal.ru</span>
+                  <a href="https://mnoportal.ru" target="_blank" rel="noopener" class="text-rose-400 hover:underline">mnoportal.ru</a>
                 </div>
               </div>
 
@@ -693,38 +754,140 @@
               </div>
             </div>
 
+            <!-- Role & Challenge Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Project & Delivery Manager</strong>: развитие и поддержка двух ключевых медицинских порталов для пациентов и врачей с жесткими регуляторными требованиями.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Старший менеджер проекта</strong> — координация команды (дизайнер, frontend/backend-разработчики, SEO-специалист и маркетолог на подряде), коммуникация с клиентом, включая зарубежных технических специалистов на английском.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-teal-400 uppercase tracking-wider">Ключевая специфика:</div>
+                <div class="text-xs font-mono text-teal-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                  <span>2. Ситуация:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Многоуровневое юридическое и медицинское согласование, строгие стандарты хранения персональных данных и бесперебойная доступность 99.9%.
+                  Клиент — крупная международная компания со сложной внутренней структурой: задачи от бизнеса поступали неструктурированно, у клиента не было времени на оперативную коммуникацию.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-teal-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">0 Нарушений комплаенса</div>
-                  <p class="text-xs text-secondary leading-relaxed">Все доработки прошли строгий аудит юридической службы без единого штрафа.</p>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>3. Мой личный вклад:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Выстроила для занятого клиента прозрачный процесс: разбираю запрос бизнеса, структурирую задачу, согласовываю ТЗ, презентую результат — вместо хаотичной передачи задач напрямую;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Координировала техническую команду при аварийном восстановлении доступности coaguchek.ru — сайт вернули в рабочее состояние;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Координировала работу маркетолога по рекламным кампаниям в Яндекс.Директе и VK-рекламе;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Веду переписку с зарубежным техническим специалистом клиента на английском языке — регулярные апдейты по задачам и статистике использования продуктов;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Разработала пакет предложений по развитию mnoportal.ru (от приложения и SEO-поиска до email-рассылки и интерактивного калькулятора) — как компенсация того, что клиент по закону не может продвигать препараты напрямую, эти улучшения работают на конверсию и удержание другими средствами;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Координирую SEO-продвижение mnoportal.ru и техническую поддержку обоих сайтов.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Специфика брендинга двух сайтов (п.5 ТЗ) -->
+            <div class="grid sm:grid-cols-2 gap-4 mb-8">
+              <!-- CoaguChek.ru Panel -->
+              <div class="p-5 rounded-2xl bg-teal-950/20 border border-teal-500/30 flex flex-col justify-between space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-teal-500/10 text-teal-300 font-mono text-xs border border-teal-500/20">Бирюзовый фирменный цвет</span>
+                  <span class="text-xs font-mono text-muted">coaguchek.ru</span>
                 </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Регламент релизов</div>
-                  <p class="text-xs text-secondary leading-relaxed">Внедрила четкий цикл тестирования и валидации данных перед выкаткой в прод.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Долгосрочный контракт</div>
-                  <p class="text-xs text-secondary leading-relaxed">Клиент пролонгировал сотрудничество благодаря прозрачной отчетности.</p>
+                <div class="text-sm font-semibold text-white">Портативный коагулометр ИНСЮс (диагностика МНО)</div>
+                <div class="text-xs text-secondary space-y-1">
+                  <div>• Число новых посетителей: <strong class="text-teal-300">+63% (с 25 до 65.4 тыс.)</strong></div>
+                  <div>• Средняя цена клика (CPC): <strong class="text-teal-300">-29.4%</strong></div>
+                  <div>• Конверсия квартала: <strong class="text-teal-300">6.8% (против ~4% годом ранее)</strong></div>
                 </div>
               </div>
+
+              <!-- MNOportal.ru Panel -->
+              <div class="p-5 rounded-2xl bg-rose-950/20 border border-rose-500/30 flex flex-col justify-between space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-rose-500/10 text-rose-300 font-mono text-xs border border-rose-500/20">Красно-коралловый цвет</span>
+                  <span class="text-xs font-mono text-muted">mnoportal.ru</span>
+                </div>
+                <div class="text-sm font-semibold text-white">Информационный мед-портал контроля МНО</div>
+                <div class="text-xs text-secondary space-y-1">
+                  <div>• SEO Google: <strong class="text-rose-300">69.3%</strong> / Яндекс: <strong class="text-rose-300">56.8%</strong></div>
+                  <div>• Половина продвигаемых запросов: <strong class="text-rose-300">в топ-10</strong></div>
+                  <div>• Стабильная посещаемость: <strong class="text-rose-300">~8300-8400 визитов/мес.</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Вывод-связка (п.4 ТЗ) -->
+            <div class="mb-8 p-4 rounded-xl bg-surface/70 border border-white/10 font-mono text-xs sm:text-sm text-lavender-200 flex items-center gap-2.5 shadow-lg">
+              <span class="text-teal-400 font-bold shrink-0">⚡ ИТОГ:</span>
+              <span class="leading-relaxed">Авария ликвидирована без потери позиций, коммуникация на английском выведена на уровень Enterprise, сотрудничество продлено на второй год с расширением команды до 4-5 человек.</span>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">+63%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост новых посетителей coaguchek.ru (с 25 до 65.4 тыс.)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 font-mono">-29.4%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">снижение средней стоимости клика (CPC)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-rose-400 font-mono">69.3%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">видимость в Google (56.8% в Яндексе, топ-10)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4-5 чел.</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">команда под моим руководством (проект с апреля 2025)</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed"><strong>coaguchek.ru:</strong> несмотря на технический сбой, в Q1 2026 число новых посетителей выросло на 63% (с 25 тыс. до 65,4 тыс.) год к году, средняя цена клика снизилась на 29,4%, конверсия в квартале, когда сайт был доступен, достигла 6,8% против ~4% годом ранее;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed"><strong>mnoportal.ru:</strong> видимость сайта по SEO-запросам — 56,8% в Яндексе и 69,3% в Google, половина продвигаемых запросов входит в топ-10, стабильная посещаемость ~8300-8400 визитов в месяц;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-teal-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Проект ведётся больше года (с апреля 2025), клиент продолжает сотрудничество, команда выросла до 4-5 человек под моим руководством.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -735,6 +898,7 @@
              =============================================== -->
         <article id="case-prime-print" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="retail" data-cursor-view="ПРАЙМ ПРИНТ">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-amber-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -744,47 +908,124 @@
                 <h3 class="heading-display text-2xl sm:text-4xl font-extrabold text-white">
                   «Прайм Принт» — Федеральный корпоративный портал
                 </h3>
+                <div class="flex items-center gap-4 mt-2 text-xs font-mono text-muted">
+                  <span>Сайт проекта:</span>
+                  <a href="https://new.primeprint.ru" target="_blank" rel="noopener" class="text-amber-400 hover:underline">new.primeprint.ru</a>
+                </div>
               </div>
 
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono">
-                  Full-Cycle Web Dev
+                  Full-Cycle Web Dev · WordPress
                 </span>
               </div>
             </div>
 
+            <!-- Role & Challenge Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Ведущий Project Manager</strong>: запуск проекта с нуля, разработка ТЗ, прототипирование, управление командой дизайна, фронтенда и бэкенда.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Project-менеджер</strong> — разработка архитектуры и UX/UI, координация команды, коммуникация с клиентом.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-amber-400 uppercase tracking-wider">Сложность:</div>
+                <div class="text-xs font-mono text-amber-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>2. Ситуация:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Объединение разрозненных производственных мощностей филиалов в единый каталог с удобным калькулятором коммерческих предложений.
+                  У клиента с 20-летней историей был сайт с копирайтом 2012–2017 года: без адаптива под мобильные, без единой формы заявки, без юридического контура по 152-ФЗ, пять типографий выглядели как одна. Задача — разработать новый сайт на WordPress с шаблоном вёрстки и редизайном логотипа за 3 месяца, не потеряв узнаваемость бренда.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-amber-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Релиз строго в срок</div>
-                  <p class="text-xs text-secondary leading-relaxed">Сдан за 2.5 месяца с полным соответствием изначальному брифу.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">+45% Заявок на расчет</div>
-                  <p class="text-xs text-secondary leading-relaxed">Интерактивный конфигуратор снизил барьер входа для корпоративных заказчиков.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Адаптивный UX</div>
-                  <p class="text-xs text-secondary leading-relaxed">100% оптимизация под мобильные устройства и планшеты сотрудников продаж.</p>
-                </div>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                <span>3. Мой личный вклад:</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Продумала архитектуру сайта и UX/UI: структуру разделов, конверсионные сценарии (форма расчёта стоимости с привязкой к городу, оффер-магнит с бесплатным образцом печати), презентовала и согласовала решения с клиентом;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Распараллелила этапы работ для соблюдения сроков: пока клиент согласовывал одни страницы, команда верстала уже утверждённые, а также параллельно готовила документы по 152-ФЗ на согласование с юристом клиента, не блокируя разработку;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">За счёт использования шаблона вёрстки как инженерного каркаса ускорила визуальную адаптацию — все страницы свёрстаны за 1-1,5 недели;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Постепенно передавала готовые страницы разработчику для сборки на WordPress с настроенной админкой под каждый блок;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Выстроила прозрачную и быструю коммуникацию с клиентом — согласования проходили с минимальными правками, структура и дизайн были приняты практически сразу.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Акцентная цитата клиента (п.4 ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-200">
+              <div class="text-xs font-mono text-amber-400 uppercase tracking-wider mb-2">// ОБРАТНАЯ СВЯЗЬ КЛИЕНТА:</div>
+              <p class="text-base sm:text-lg italic font-medium leading-relaxed">
+                «Это что-то кардинально новое для нас, и нам нравится это, и то, как оно выглядит»
+              </p>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">3 месяца</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">чистой разработки строго в согласованный срок</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1–1.5 нед.</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">скорость вёрстки всех страниц благодаря шаблону</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">5 типографий</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">объединены в единый каталог с калькулятором</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">100% 152-ФЗ</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">юридический контур согласован с юристом</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Проект уложился в 3 месяца чистой разработки, несмотря на дополнительное время на согласования;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Клиент получил новый адаптивный сайт (new.primeprint.ru) с рабочим каналом заявок, отдельными страницами для пяти типографий, удобной админкой на WordPress и полным соответствием 152-ФЗ;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Клиент высоко оценил результат: «Это что-то кардинально новое для нас, и нам нравится это, и то, как оно выглядит»;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-amber-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">По итогам сдачи клиент готов оставить положительный отзыв и рекомендовать сотрудничество.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -795,6 +1036,7 @@
              =============================================== -->
         <article id="case-sibur" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="hr" data-cursor-view="СИБУР">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -808,43 +1050,124 @@
 
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 text-xs font-mono">
-                  Employer Branding
+                  Employer Branding · Alumni
                 </span>
               </div>
             </div>
 
+            <!-- Role & Target Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Project Manager</strong>: координация креативной концепции, разработка интерактивного лендинга и медиапланирование рекламных каналов.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Account/Project manager</strong> — коммуникация с клиентом, тайминги, результат.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Задача:</div>
+                <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span>2. Цель проекта:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Привлечь молодых специалистов и инженеров в химическую промышленность, сломав консервативные стереотипы о карьере на заводах.
+                  Вернуть бывших сотрудников (алюмни) через спецпроект — промо-сайт и рекламную кампанию, приуроченную к 14 февраля, в сжатый срок (2 месяца), в коллаборации с агентством-посредником TWIGA.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Высокий виральный охват</div>
-                  <p class="text-xs text-secondary leading-relaxed">Интерактивный спецпроект получил широкий отклик в профильных сообществах.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Выполнение плана найма</div>
-                  <p class="text-xs text-secondary leading-relaxed">Целевой пул стажеров закрыт за 3 недели до дедлайна с высоким средним баллом.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Награда за креатив</div>
-                  <p class="text-xs text-secondary leading-relaxed">Кейс отмечен внутренним комитетом СИБУР как образец эффективного HR-маркетинга.</p>
-                </div>
+            <!-- Context & Problem Callout -->
+            <div class="mb-8 p-5 rounded-2xl bg-rose-500/10 border border-rose-400/20 text-rose-200 text-xs sm:text-sm leading-relaxed">
+              <strong class="text-rose-300 font-mono uppercase block mb-1">Проблема на старте:</strong>
+              На этапе разработки сайта проект вёл менеджер по разработке, и к моменту запуска рекламных кампаний у клиента возникла холодность в коммуникации — недостаточная прозрачность процесса снижала вовлечённость и доверие клиента.
+            </div>
+
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>3. Мой личный вклад:</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Подключилась на этапе запуска рекламы и перестроила коммуникацию с клиентом: увеличила частоту и детальность апдейтов, сделала процесс понятным и прозрачным — это быстро вернуло лояльность клиента, после чего ведение проекта полностью перешло ко мне;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Структурировала запуск: контролировала финальное согласование креативов и лендинга, чтобы уложиться в сжатый двухмесячный срок на фоне уже прошедшего длительного этапа разработки сайта;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Регулярные синки с командой (маркетинг, дизайн) по итогам спринтов: разбор промежуточных результатов, выработка новых гипотез — в частности, решение о перераспределении бюджета между ВКонтакте и Яндекс.Директом принималось командно на основе таких разборов;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Еженедельные апдейты клиенту по спринтам: результаты, план на следующий этап, обратная связь по ходу кампании;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Провела презентацию результатов для клиента.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Вывод-связка (п.4 ТЗ) -->
+            <div class="mb-8 p-4 rounded-xl bg-surface/70 border border-white/10 font-mono text-xs sm:text-sm text-lavender-200 flex items-center gap-2.5 shadow-lg">
+              <span class="text-emerald-400 font-bold shrink-0">⚡ ИТОГ:</span>
+              <span class="leading-relaxed">Восстановила доверие и лояльность клиента после холодного старта, клиент одобрил идеи быстро и без доработок, а после инициировал новый проект.</span>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">270+</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">откликов получено в рамках HR-спецпроекта</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">~20%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">составили реальные бывшие сотрудники (алюмни)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">в 2.3 раза</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост конверсии по оптимизированному каналу</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">2 месяца</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">сжатый дедлайн к 14 февраля в связке с TWIGA</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Восстановила доверие и лояльность клиента после холодного старта, полностью взяла проект на себя;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Уложились в сжатый срок;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Клиент одобрил идеи быстро и без доработок;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Кампания дала 270+ откликов (около 20% — реальные бывшие сотрудники), конверсия по оптимизированному каналу выросла в 2,3 раза;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-emerald-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Клиент остался доволен и инициировал обсуждение следующего проекта.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -855,6 +1178,7 @@
              =============================================== -->
         <article id="case-auchan" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="hr" data-cursor-view="АШАН">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -868,43 +1192,110 @@
 
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 rounded-full bg-rose-400/10 border border-rose-400/30 text-rose-400 text-xs font-mono">
-                  +125% к KPI
+                  План перевыполнен · Цель ~300
                 </span>
               </div>
             </div>
 
+            <!-- Role & Target Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Project & Performance Manager</strong>: запуск сквозной аналитики, оперативная корректировка креативов, координация колл-центра и рекрутеров.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Account-менеджер</strong> — от пресейла до сдачи проекта.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-rose-400 uppercase tracking-wider">Вызов:</div>
+                <div class="text-xs font-mono text-rose-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                  <span>2. Цель проекта:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Острая конкуренция за линейный персонал в период сезонного пика ритейла. Необходимость минимизировать стоимость валидной заявки (CPA).
+                  Получить ~300 откликов кандидатов за месяц через Яндекс.Директ и VK при высокой конкуренции за кадры в Москве.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-rose-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">314 Откликов</div>
-                  <p class="text-xs text-secondary leading-relaxed">Зафиксировано за 30 дней при плановом значении 140 откликов.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">-28% Стоимость лида</div>
-                  <p class="text-xs text-secondary leading-relaxed">Оптимизация рекламных связок дала существенную экономию бюджета.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Быстрый отбор</div>
-                  <p class="text-xs text-secondary leading-relaxed">Внедрили автоматизированный квиз, отсекающий нерелевантных соискателей.</p>
-                </div>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                <span>3. Мой личный вклад:</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed"><strong>Пресейл:</strong> бриф с клиентом, выявление болей и целей; совместно с тимлидом презентовала стратегию и бюджет, встроила прозрачную коммуникацию с контактным лицом на старте;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed"><strong>Структурировала запуск по этапам (~2 недели):</strong> согласование креативов, пополнение бюджета в рекламных кабинетах, настройка кампаний;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed"><strong>После запуска</strong> — контроль через регулярные синки с командой: разбор ошибок, промежуточных результатов, генерация новых гипотез;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Еженедельные апдейты клиенту по спринтам (результаты, план), сбор обратной связи по качеству лидов для корректировки гипотез в моменте;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed"><strong>По итогам</strong> — презентация результатов клиенту и сбор обратной связи по качеству работы — для повышения лояльности, увеличения LTV клиента и выхода на доп. продажи.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Вывод-связка (п.4 ТЗ) -->
+            <div class="mb-8 p-4 rounded-xl bg-surface/70 border border-white/10 font-mono text-xs sm:text-sm text-lavender-200 flex items-center gap-2.5 shadow-lg">
+              <span class="text-rose-400 font-bold shrink-0">⚡ ИТОГ:</span>
+              <span class="leading-relaxed">Высокая лояльность клиента благодаря прозрачности процесса и регулярной обратной связи привела к обсуждению повторного проекта на новый сезон (апсейл).</span>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-rose-400 font-mono">314</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">откликов получено за месяц (при цели ~300)</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Перевыполнен</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">план найма в условиях жесткой конкуренции в Москве</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">~2 недели</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">структурированный запуск кампании от брифа до старта</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Апсейл</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">обсуждение повторного проекта на новый сезон</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">314 откликов при цели ~300 — план перевыполнен;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Высокая лояльность клиента благодаря прозрачности процесса и регулярной обратной связи;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-rose-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Обсуждение повторного проекта на новый сезон (апсейл).</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -915,6 +1306,7 @@
              =============================================== -->
         <article id="case-retail" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="retail" data-cursor-view="RETAIL">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-yellow-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -928,43 +1320,115 @@
 
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 text-xs font-mono">
-                  Омниканальный маркетинг
+                  Рост чеков на 5% за 2 месяца
                 </span>
               </div>
             </div>
 
+            <!-- Role & Target Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Account & Project Lead</strong>: управление стратегией привлечения офлайн- и онлайн-покупателей, сквозная интеграция с программой лояльности.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Account-менеджер</strong>.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-yellow-400 uppercase tracking-wider">Суть проекта:</div>
+                <div class="text-xs font-mono text-yellow-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                  <span>2. Ситуация и цель проекта:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Переход из традиционной офлайн-рекламы в персонализированные гео-таргетированные цифровые каналы с оценкой доходимости до магазинов.
+                  <strong>Ситуация:</strong> клиент столкнулся с падением трафика в 2 раза год к году. Диагностика показала, что проблема лежит не только в рекламе, а в разрозненности каналов и отсутствии единой системы коммуникации с покупателем — сеть работала в формате «у дома», но это преимущество не было раскрыто ни в стратегии, ни в операционных процессах на стороне клиента.<br>
+                  <strong class="text-white mt-1 block">Цель проекта:</strong> остановить отток покупателей и выстроить комплексную систему локального продвижения на стыке digital, офлайна и внутренних процессов клиента.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-yellow-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">+63% Трафика</div>
-                  <p class="text-xs text-secondary leading-relaxed">Рост посещаемости каталога спецпредложений и активаций купонов.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Снижение CPO</div>
-                  <p class="text-xs text-secondary leading-relaxed">Повышение конверсии промо-акций за счет четкой сегментации базы.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Дашборд для C-level</div>
-                  <p class="text-xs text-secondary leading-relaxed">Автоматизированный PowerBI/DataLens отчет для руководства сети.</p>
-                </div>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                <span>3. Мой личный вклад:</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Инициировала и выстроила прямую коммуникацию с ключевыми стейкхолдерами на стороне клиента, чтобы выявить бизнес-проблемы за пределами маркетинга и решить их совместно, маркетинговыми и продуктовыми инструментами;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Организовала привлечение и координацию внешних подрядчиков (инфлюенсеров) для тестирования локальных каналов и механики промокодов;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Наладила совместную работу с внутренней SMM-командой клиента, синхронизировав её со стратегией агентства — обеспечила единый tone of voice и согласованность контента и рекламы во всех каналах для омниканального эффекта;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Вела регулярную отчётность и коммуникацию с клиентом на протяжении всего проекта, оперативно транслировала промежуточные результаты и корректировки стратегии;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Провела презентацию итогов и рекомендаций по дальнейшему продвижению, закрепив доверие клиента к долгосрочному сотрудничеству.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Вывод-связка (п.4 ТЗ) -->
+            <div class="mb-8 p-4 rounded-xl bg-surface/70 border border-white/10 font-mono text-xs sm:text-sm text-lavender-200 flex items-center gap-2.5 shadow-lg">
+              <span class="text-yellow-400 font-bold shrink-0">⚡ ИТОГ:</span>
+              <span class="leading-relaxed">Выстроена устойчивая связка между агентством и внутренними командами клиента — редкий результат, когда агентство становится не подрядчиком «на подхвате», а полноценным партнёром в решении бизнес-задач клиента.</span>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-yellow-400 font-mono">+5%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост количества чеков за 2 месяца</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">+31%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост среднего чека в последние недели работы</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">3.35 млн</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">показов в Яндекс.Директе</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1.69 млн</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">показов ВКонтакте</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Рост количества чеков на 5% за 2 месяца, рост среднего чека на 31% в последние недели работы;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Более 1,69 млн показов в VK и 3,35 млн — в Яндекс.Директе;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Выстроена устойчивая связка между агентством и внутренними командами клиента — редкий результат, когда агентство становится не подрядчиком «на подхвате», а полноценным партнёром в решении бизнес-задач клиента;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-yellow-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Клиент получил комплексную стратегию дальнейшего продвижения и продолжил сотрудничество.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -975,6 +1439,7 @@
              =============================================== -->
         <article id="case-tatneft" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="b2b" data-cursor-view="ТАТНЕФТЬ">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -993,48 +1458,112 @@
               </div>
             </div>
 
+            <!-- Role & Target Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Senior PM / Digital Strategist</strong>: разработка многоуровневого роадмапа внедрения внутренних цифровых каналов взаимодействия с персоналом.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Project-менеджер</strong>.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lime-400 uppercase tracking-wider">Специфика:</div>
+                <div class="text-xs font-mono text-lime-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                  <span>2. Задача:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Масштаб корпорации в десятки тысяч сотрудников, распределенные производственные дивизионы и строгие требования информбезопасности.
+                  Выстроить стратегию внутренней коммуникации сотрудников компании с учётом специфики аудитории.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-lime-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Готовая дорожная карта</div>
-                  <p class="text-xs text-secondary leading-relaxed">Стратегия на 18 месяцев с оценкой ресурсов и рисков принята советом директоров.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Единый стандарт</div>
-                  <p class="text-xs text-secondary leading-relaxed">Унифицированы требования к корпоративным медиа и внутренним порталам.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Успешная защита</div>
-                  <p class="text-xs text-secondary leading-relaxed">Защитила концепцию перед топ-менеджментом корпорации с первого раунда.</p>
-                </div>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                <span>3. Мой личный вклад:</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Участвовала в брифе и пресейле проекта: выявляла боли клиента, формируя понимание задачи на старте;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Контролировала весь процесс реализации: отвечала за соблюдение дедлайнов и координацию между командой агентства и клиентом;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Руководила процессом адаптации стратегии под специфику аудитории — уровень цифровой грамотности и особенности восприятия сотрудников «Татнефти»;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Управляла процессом доработки стратегии по итогам обратной связи от клиента, определяя приоритеты изменений;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Разработала карту реализации digital-решений с разбивкой по срокам на год вперёд, что открыло возможность для дальнейшего апсейла на стороне агентства.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Вывод-связка (п.4 ТЗ) -->
+            <div class="mb-8 p-4 rounded-xl bg-surface/70 border border-white/10 font-mono text-xs sm:text-sm text-lavender-200 flex items-center gap-2.5 shadow-lg">
+              <span class="text-lime-400 font-bold shrink-0">⚡ ИТОГ:</span>
+              <span class="leading-relaxed">Разработана и согласована стратегия внутренней коммуникации, точно попадающая в специфику аудитории «Татнефти», что привело к обсуждению дальнейшего сотрудничества (апсейл).</span>
+            </div>
+
+            <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">NDA</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">стратегия внутренней коммуникации enterprise-уровня</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">1 год вперед</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">годовая карта реализации цифровых решений по срокам</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">100%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">адаптация под уровень цифровой грамотности сотрудников</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Апсейл</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">выход на дальнейшее сопровождение после защиты</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Разработана и согласована стратегия внутренней коммуникации, точно попадающая в специфику аудитории «Татнефти»;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lime-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Подготовлена годовая карта реализации digital-решений, что привело к обсуждению дальнейшего сотрудничества (апсейл) после утверждения стратегии.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
         </article>
 
         <!-- ==============================================
-             CASE 08: ШКОЛА МОСТИК (RETENTION & CLIENT CARE)
+             CASE 08: ШКОЛА МОСТИК (CLIENT CARE & RETENTION)
              =============================================== -->
         <article id="case-mostik" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="b2b retail" data-cursor-view="МОСТИК">
           <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
               <div>
@@ -1052,43 +1581,100 @@
 
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 rounded-full bg-purple-400/10 border border-purple-400/30 text-purple-400 text-xs font-mono">
-                  80.2% Retention
+                  Кейс клиентской лояльности
                 </span>
               </div>
             </div>
 
+            <!-- Role & Situation Box -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider">Роль:</div>
-                <p class="text-white text-sm sm:text-base font-medium">
-                  <strong>Account Manager & Стратег</strong>: восстановление доверия клиента, перестройка процессов взаимодействия и запуск регулярного клиентского сервиса.
+                <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
+                  <span>1. Роль:</span>
+                </div>
+                <p class="text-white text-sm sm:text-base font-medium leading-relaxed">
+                  <strong>Account-менеджер</strong> — ведение клиента mostikschool.ru.
                 </p>
               </div>
 
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
-                <div class="text-xs font-mono text-purple-400 uppercase tracking-wider">Ситуация:</div>
+                <div class="text-xs font-mono text-purple-400 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  <span>2. Ситуация:</span>
+                </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  Клиент был на грани расторжения договора из-за отсутствия регулярных статусов и непонимания движения бюджета со стороны предыдущих исполнителей.
+                  Рекламные показатели по проекту были слабыми — результаты не оправдывали ожиданий клиента по метрикам эффективности.
                 </p>
               </div>
             </div>
 
-            <div class="space-y-4">
-              <div class="text-xs font-mono text-purple-400 uppercase tracking-wider">// РЕЗУЛЬТАТЫ:</div>
-              <div class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">80.2% Retention</div>
-                  <p class="text-xs text-secondary leading-relaxed">Клиент не просто остался на обслуживании, но и расширил бюджет на 40%.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Прозрачный трекинг</div>
-                  <p class="text-xs text-secondary leading-relaxed">Внедрили еженедельные спринт-демо и наглядные отчеты с понятными метриками.</p>
-                </div>
-                <div class="p-4 rounded-xl bg-surface/40 border border-white/5">
-                  <div class="text-white font-bold text-sm mb-1">Рост набора учеников</div>
-                  <p class="text-xs text-secondary leading-relaxed">Сформирован стабильный поток заявок на новый учебный год.</p>
-                </div>
+            <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
+              <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                <span>3. Мой личный вклад:</span>
               </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-purple-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Выстроила полностью прозрачную коммуникацию: честно показывала клиенту реальную картину по рекламе, не скрывая слабые результаты;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-purple-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Демонстрировала искреннюю вовлечённость в задачу клиента — не формальный отчёт, а разбор проблемы и поиск решения вместе с ним;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-purple-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Своей вовлечённостью и открытостью компенсировала слабые рекламные показатели — клиент чувствовал, что команда старается и искренне хочет помочь, а не просто отрабатывает бюджет.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Акцентный сторителлинг (п.4 ТЗ) -->
+            <div class="mb-8 p-6 rounded-2xl bg-purple-950/30 border border-purple-500/30 text-purple-200">
+              <div class="text-xs font-mono text-purple-300 uppercase tracking-wider mb-2">// ФИЛОСОФИЯ УПРАВЛЕНИЯ & ДОВЕРИЕ:</div>
+              <p class="text-base sm:text-lg italic font-medium leading-relaxed">
+                «Редкий случай, когда доверие к человеку и искренняя вовлечённость оказываются сильнее, чем формальные метрики результата рекламы.»
+              </p>
+            </div>
+
+            <!-- Честные акцентные плашки (БЕЗ ложного 80% Retention и БЕЗ выдуманных 40% бюджета) -->
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono">100%</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">честность и прозрачность без приукрашивания слабой рекламы</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Переход за PM</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">клиент сам вышел на связь через месяцы для продолжения работы</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">Партнерство</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">совместный поиск решений вместо формальных отчетов</div>
+              </div>
+              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Доверие</div>
+                <div class="text-xs text-muted font-mono mt-1 leading-normal">человеческий контакт сильнее формальных цифр</div>
+              </div>
+            </div>
+
+            <!-- 4. Результат (100% Дословно из ТЗ) -->
+            <div class="space-y-4 pt-2 border-t border-white/5">
+              <div class="text-xs font-mono uppercase text-muted tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                <span>4. Результаты:</span>
+              </div>
+              <ul class="space-y-3 text-secondary text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-purple-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Несмотря на невысокие результаты кампании, клиент остался полностью удовлетворён сотрудничеством благодаря качеству коммуникации;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-purple-400 font-bold shrink-0 mt-0.5">—</span>
+                  <span class="leading-relaxed">Спустя несколько месяцев после смены места работы клиент сам вышел на связь и перешёл продолжать сотрудничество именно за менеджером — редкий случай, когда доверие к человеку оказывается сильнее, чем формальные метрики результата.</span>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -1319,10 +1905,10 @@
   <!-- Dynamic Dennis Snellenberg Cursor will be auto-injected by cursor.js -->
 
   <!-- Application Logic Scripts -->
-  <script src="js/webgl-background.js"></script>
-  <script src="js/cursor.js"></script>
-  <script src="js/magnetic.js"></script>
-  <script src="js/bento-metrics.js"></script>
-  <script src="js/main.js"></script>
+  <script src="v2/js/webgl-background.js"></script>
+  <script src="v2/js/cursor.js"></script>
+  <script src="v2/js/magnetic.js"></script>
+  <script src="v2/js/bento-metrics.js"></script>
+  <script src="v2/js/main.js"></script>
 </body>
 </html>

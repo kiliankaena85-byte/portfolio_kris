@@ -4,3 +4,6 @@
 *.log
 skills-lock.json
 test_*.png
+
+build_cases_v2.py
+TZ_extracted.txt
