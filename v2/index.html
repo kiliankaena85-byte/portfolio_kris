@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -77,7 +77,9 @@
        Detached pill header with blur and dual-mask glow
        ========================================================================== -->
   <header class="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 pt-3 sm:pt-4 pointer-events-none">
-    <div class="max-w-6xl mx-auto flex items-center justify-between pointer-events-auto">
+    <!-- Ambient Mobile & Desktop Scroll Blur Shield (prevents text clashing behind floating islands) -->
+    <div class="header-backdrop-shield absolute inset-x-0 top-0 h-24 -z-10 bg-gradient-to-b from-[#060114]/95 via-[#060114]/80 to-transparent backdrop-blur-md pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto flex items-center justify-between pointer-events-auto relative">
       
       <!-- Brand Pill -->
       <a href="#hero" class="bezel-outer !p-1 !rounded-2xl group flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-[1.02] shrink-0">
@@ -519,7 +521,7 @@
              CASE 01: GLOBAL GROUP (FEATURED SPOTLIGHT WITH SLIDES)
              =============================================== -->
         <article id="case-global-group" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="b2b" data-cursor-view="GLOBAL GROUP">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -568,98 +570,6 @@
               </div>
             </div>
 
-<!-- Interactive Slide Gallery (7 Product Solutions & Architecture Mockups) -->
-            <div class="mb-10">
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-xs font-mono text-white flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
-                  <span>ПРОДУКТОВЫЕ ИНТЕРФЕЙСЫ И АРХИТЕКТУРА РЕШЕНИЙ (Кликните для полноэкранного просмотра):</span>
-                </div>
-                <span class="text-xs font-mono text-muted">7 Решений</span>
-              </div>
-
-              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
-                
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/01_architecture_code.jpg" data-slide-caption="«Развернули существующий проект, изучили код и архитектуру, нашли проблемные места и сформировали основу для дальнейшего развития.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/01_architecture_code.jpg" alt="Архитектура и код" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">01 · АРХИТЕКТУРА</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Изучили код и стабилизировали систему</span>
-                  </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/02_onboarding_catalog.jpg" data-slide-caption="«Добавили валидацию ИНН и интеграцию с DaData, упростили регистрацию, переработали онбординг и сделали правила работы сервиса понятными ещё до первого заказа.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/02_onboarding_catalog.jpg" alt="Онбординг и каталог" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">02 · ОНБОРДИНГ</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Понятные правила до первого заказа</span>
-                  </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/03_registration_dadata.jpg" data-slide-caption="«Упрощение онбординга: форма регистрации юрлиц и ИП с автозаполнением реквизитов и проверкой контрагента через DaData.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/03_registration_dadata.jpg" alt="Регистрация и DaData" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">03 · DADATA & ИНН</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Автозаполнение реквизитов юрлиц и ИП</span>
-                  </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/04_web_search_catalog.jpg" data-slide-caption="«Улучшили категории, фильтры, поиск и карточки товаров. Для весовых товаров добавили отдельную логику количества и веса.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/04_web_search_catalog.jpg" alt="Каталог и поиск" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">04 · КАТАЛОГ</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Поиск, умные фильтры и категории</span>
-                  </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/05_weight_lemon_mobile.jpg" data-slide-caption="«Детализация карточек: отдельная логика фасовки и минимального веса заказа.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/05_weight_lemon_mobile.jpg" alt="Весовые товары" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">05 · ВЕСОВЫЕ ТОВАРЫ</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Логика фасовки и весовых позиций</span>
-                  </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/06_status_bar_laptop.jpg" data-slide-caption="«Вместо неожиданного отказа появилась статусная строка, показывающая, сколько осталось до минимальной суммы заказа или дозаказа.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/06_status_bar_laptop.jpg" alt="Статусная строка" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">06 · ЧЕКАУТ</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Статусная строка порога минимального заказа</span>
-                  </div>
-                </div>
-
-                <div class="group relative rounded-xl overflow-hidden border border-white/10 bg-void cursor-pointer hover:border-lime-400 transition-all flex flex-col"
-                     data-open-slide data-gallery="global-group" data-cursor-drag="СМОТРЕТЬ" data-slide-src="../assets/global/07_omnichannel_modals.jpg" data-slide-caption="«Каждую доработку проектируем и выпускаем одновременно для двух приложений и двух веб-версий. Настроили Яндекс Метрику и AppMetrica, чтобы принимать решения о следующих изменениях на основе данных.»">
-                  <div class="aspect-video w-full overflow-hidden bg-black/40">
-                    <img src="../assets/global/07_omnichannel_modals.jpg" alt="Мультиплатформа" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-2.5 bg-surface/80 flex flex-col justify-between flex-1 border-t border-white/5">
-                    <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider">07 · АНАЛИТИКА</span>
-                    <span class="text-[11px] text-white/90 font-medium leading-snug line-clamp-2 mt-1">Сквозной релиз (4 платформы) & Метрика</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
             <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
             <div class="mb-8 p-6 rounded-2xl bg-surface/40 border border-white/5 space-y-4">
               <div class="text-xs font-mono uppercase text-lavender-400 tracking-wider flex items-center gap-2">
@@ -689,22 +599,22 @@
             </div>
 
 <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">80,2%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">активных пользователей приложения регулярно совершают действия</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-400 font-mono">80,2%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">активных пользователей регулярно совершают действия</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">24,5%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">retention 4 недели</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono">24,5%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">retention 4 недели</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">18,3%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">retention 8 недель</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono">18,3%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">retention 8 недель</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">~80%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">конверсия из&nbsp;корзины в&nbsp;заказ (отказы 0,8%)</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-400 font-mono">~80%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">конверсия из&nbsp;корзины в&nbsp;заказ (отказы 0,8%)</div>
               </div>
             </div>
 
@@ -745,7 +655,7 @@
              CASE 02: ROCHE (PHARMA / MEDTECH)
              =============================================== -->
         <article id="case-roche" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="pharma" data-cursor-view="ROCHE">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-teal-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -894,7 +804,7 @@
              CASE 03: ПРАЙМ ПРИНТ (WEB DEV / ENTERPRISE)
              =============================================== -->
         <article id="case-prime-print" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="retail" data-cursor-view="ПРАЙМ ПРИНТ">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-amber-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -972,22 +882,22 @@
             </div>
 
 <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">3 месяца</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">чистой разработки строго в&nbsp;согласованный срок</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-lg sm:text-2xl lg:text-3xl font-extrabold text-amber-400 font-mono leading-tight">3 месяца</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">чистой разработки строго в&nbsp;согласованный срок</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1–1.5 нед.</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">скорость вёрстки всех страниц благодаря шаблону</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-lg sm:text-2xl lg:text-3xl font-extrabold text-white font-mono leading-tight">1–1.5 нед.</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">скорость вёрстки страниц благодаря шаблону</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">5 типографий</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">объединены в&nbsp;единый каталог с&nbsp;калькулятором</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-base sm:text-xl lg:text-2xl font-extrabold text-lime-400 font-mono tracking-tight leading-tight">5 типографий</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">объединены в&nbsp;единый каталог с&nbsp;калькулятором</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">100% 152-ФЗ</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">юридический контур согласован с&nbsp;юристом</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-base sm:text-xl lg:text-2xl font-extrabold text-lime-400 font-mono tracking-tight leading-tight">100% 152-ФЗ</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">юридический контур согласован с&nbsp;юристом</div>
               </div>
             </div>
 
@@ -1032,7 +942,7 @@
              CASE 04: СИБУР (HR СПЕЦПРОЕКТ)
              =============================================== -->
         <article id="case-sibur" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="hr" data-cursor-view="СИБУР">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -1122,22 +1032,22 @@
             </div>
 
             <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">270+</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">откликов получено в рамках HR-спецпроекта</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-emerald-400 font-mono">270+</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">откликов получено в рамках HR-спецпроекта</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">~20%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">составили реальные бывшие сотрудники (алюмни)</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-mono">~20%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">составили бывшие сотрудники (алюмни)</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">в 2.3 раза</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост конверсии по оптимизированному каналу</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-lg sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono leading-tight">в&nbsp;2.3&nbsp;раза</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">рост конверсии по оптимизированному каналу</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">2 месяца</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">сжатый дедлайн проекта (2 мес.) в&nbsp;связке с&nbsp;TWIGA</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-lg sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono leading-tight">2 месяца</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">сжатый дедлайн проекта в&nbsp;связке с&nbsp;TWIGA</div>
               </div>
             </div>
 
@@ -1178,7 +1088,7 @@
              CASE 05: АШАН (HR LEADGEN)
              =============================================== -->
         <article id="case-auchan" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="hr" data-cursor-view="АШАН">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -1258,22 +1168,22 @@
             </div>
 
             <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-rose-400 font-mono">314</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">откликов получено за месяц (при цели ~300)</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-rose-400 font-mono">314</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">откликов получено за месяц (при цели ~300)</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Перевыполнен</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">план найма в условиях жесткой конкуренции в Москве</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-sm xs:text-base sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono tracking-tight leading-tight">Перевыполнен</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">план найма в&nbsp;условиях жесткой конкуренции</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">~2 недели</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">структурированный запуск кампании от брифа до старта</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-base sm:text-2xl lg:text-3xl font-extrabold text-white font-mono leading-tight">~2 недели</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">структурированный запуск кампании от брифа</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Апсейл</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">обсуждение повторного проекта на новый сезон</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono leading-tight">Апсейл</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">обсуждение повторного проекта на новый сезон</div>
               </div>
             </div>
 
@@ -1306,7 +1216,7 @@
              CASE 06: РЕГИОНАЛЬНАЯ RETAIL-СЕТЬ
              =============================================== -->
         <article id="case-retail" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="retail" data-cursor-view="RETAIL">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-yellow-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -1327,7 +1237,7 @@
             </div>
 
             <!-- Role & Target Box -->
-            <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="grid md:grid-cols-2 gap-4 sm:gap-6 mb-6">
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
                 <div class="text-xs font-mono text-lavender-400 uppercase tracking-wider flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-lavender-400"></span>
@@ -1341,13 +1251,23 @@
               <div class="p-5 rounded-2xl bg-surface/60 border border-white/5 space-y-2">
                 <div class="text-xs font-mono text-yellow-400 uppercase tracking-wider flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-                  <span>2. Ситуация и цель проекта:</span>
+                  <span>2. Цель проекта:</span>
                 </div>
                 <p class="text-secondary text-sm sm:text-base leading-relaxed">
-                  <strong>Ситуация:</strong> клиент столкнулся с падением трафика в 2 раза год к году. Диагностика показала, что проблема лежит не только в рекламе, а в разрозненности каналов и отсутствии единой системы коммуникации с покупателем — сеть работала в формате «у дома», но это преимущество не было раскрыто ни в стратегии, ни в операционных процессах на стороне клиента.<br>
-                  <strong class="text-white mt-1 block">Цель проекта:</strong> остановить отток покупателей и выстроить комплексную систему локального продвижения на стыке digital, офлайна и внутренних процессов клиента.
+                  Остановить отток покупателей и выстроить комплексную систему локального продвижения на стыке digital, офлайна и внутренних процессов клиента.
                 </p>
               </div>
+            </div>
+
+            <!-- Ситуация на старте (выделена в отдельный блок по ТЗ) -->
+            <div class="mb-8 p-5 rounded-2xl bg-yellow-500/10 border border-yellow-400/25 space-y-2">
+              <div class="text-xs font-mono text-yellow-400 uppercase tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                <span>Ситуация на старте (Падение трафика в 2 раза):</span>
+              </div>
+              <p class="text-secondary text-sm sm:text-base leading-relaxed">
+                Клиент столкнулся с падением трафика в&nbsp;2&nbsp;раза год к&nbsp;году. Диагностика показала, что проблема лежит не&nbsp;только в&nbsp;рекламе, а&nbsp;в&nbsp;разрозненности каналов и&nbsp;отсутствии единой системы коммуникации с&nbsp;покупателем — сеть работала в&nbsp;формате «у дома», но&nbsp;это преимущество не&nbsp;было раскрыто ни&nbsp;в&nbsp;стратегии, ни&nbsp;в&nbsp;операционных процессах на&nbsp;стороне клиента.
+              </p>
             </div>
 
             <!-- 3. Мой личный вклад (100% Дословно из ТЗ) -->
@@ -1387,22 +1307,22 @@
             </div>
 
             <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-yellow-400 font-mono">+5%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост количества чеков за 2 месяца</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-yellow-400 font-mono">+5%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">рост количества чеков за 2 месяца</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">+31%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">рост среднего чека в последние недели работы</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono">+31%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">рост среднего чека в последние недели</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">3.35 млн</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">показов в Яндекс.Директе</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-mono">3.35 млн</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">показов в Яндекс.Директе</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1.69 млн</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">показов ВКонтакте</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-mono">1.69 млн</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">показов ВКонтакте</div>
               </div>
             </div>
 
@@ -1439,7 +1359,7 @@
              CASE 07: ТАТНЕФТЬ (ENTERPRISE DIGITAL STRATEGY)
              =============================================== -->
         <article id="case-tatneft" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="b2b" data-cursor-view="ТАТНЕФТЬ">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -1519,22 +1439,22 @@
             </div>
 
             <!-- Крупные плашки-цифры акцентов (п.4 ТЗ) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">NDA</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">стратегия внутренней коммуникации enterprise-уровня</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-mono">NDA</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">стратегия внутренней коммуникации enterprise-уровня</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">1 год вперед</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">годовая карта реализации цифровых решений по срокам</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-base sm:text-xl lg:text-2xl font-extrabold text-lime-400 font-mono tracking-tight leading-tight">1 год вперед</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">годовая карта цифровых решений по&nbsp;срокам</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">100%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">адаптация под уровень цифровой грамотности сотрудников</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-emerald-400 font-mono">100%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">адаптация под уровень грамотности сотрудников</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Апсейл</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">выход на дальнейшее сопровождение после защиты</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono leading-tight">Апсейл</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">выход на сопровождение после защиты</div>
               </div>
             </div>
 
@@ -1563,7 +1483,7 @@
              CASE 08: ШКОЛА МОСТИК (CLIENT CARE & RETENTION)
              =============================================== -->
         <article id="case-mostik" class="case-study-card bezel-outer !p-2 !rounded-[2.2rem]" data-category="b2b retail" data-cursor-view="МОСТИК">
-          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-6 sm:p-10 relative overflow-hidden">
+          <div class="bezel-inner !rounded-[calc(2.2rem-0.5rem)] p-4 sm:p-8 lg:p-10 relative overflow-hidden">
             <div class="absolute -top-32 -right-32 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 mb-8">
@@ -1641,22 +1561,22 @@
             </div>
 
             <!-- Честные акцентные плашки (БЕЗ ложного 80% Retention и БЕЗ выдуманных 40% бюджета) -->
-            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono">100%</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">честность и прозрачность без приукрашивания слабой рекламы</div>
+            <div class="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-purple-400 font-mono">100%</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">честность и прозрачность без приукрашивания рекламы</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Переход за PM</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">клиент сам вышел на связь через месяцы для продолжения работы</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-sm sm:text-lg lg:text-xl font-extrabold text-lime-400 font-mono tracking-tight leading-tight">Переход за PM</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">клиент сам вышел на связь для продолжения работы</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">Партнерство</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">совместный поиск решений вместо формальных отчетов</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-base sm:text-xl lg:text-2xl font-extrabold text-white font-mono tracking-tight leading-tight">Партнерство</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">совместный поиск решений вместо формальных отчетов</div>
               </div>
-              <div class="p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
-                <div class="text-2xl sm:text-3xl font-extrabold text-lime-400 font-mono">Доверие</div>
-                <div class="text-xs text-muted font-mono mt-1 leading-normal">человеческий контакт сильнее формальных цифр</div>
+              <div class="p-3 sm:p-4 rounded-xl bg-surface/50 border border-white/5 flex flex-col justify-between">
+                <div class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-lime-400 font-mono leading-tight">Доверие</div>
+                <div class="text-[11px] sm:text-xs text-muted font-sans mt-1 leading-snug break-words">человеческий контакт сильнее формальных цифр</div>
               </div>
             </div>
 
@@ -1861,7 +1781,7 @@
               <span>•</span>
               <span>Lenis 0.165 Lerp</span>
               <span>•</span>
-              <a href="../index.html" class="text-lavender-400 hover:text-lime-400 transition-colors">Перейти к V1 →</a>
+              <a href="v1.html" class="text-lavender-400 hover:text-lime-400 transition-colors">Перейти к V1 →</a>
             </div>
           </div>
 

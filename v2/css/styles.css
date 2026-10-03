@@ -173,6 +173,13 @@ html.lenis, .lenis.lenis-smooth {
   padding: 0.45rem;
   box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.75);
   transition: border-color 0.35s var(--ease-spring), transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.case-study-card {
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .bezel-outer:hover {
